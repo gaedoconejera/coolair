@@ -21,25 +21,7 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Barra de navegación */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-nav a {
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    background-color: #007bff;
-}
-
-/* Sección principal */
+/* Sección hero */
 .hero {
     background-image: url('https://example.com/aire-acondicionado.jpg'); /* URL de imagen de fondo */
     background-size: cover;
@@ -54,43 +36,31 @@ nav a:hover {
 
 .hero h2 {
     font-size: 3rem;
-    margin: 0;
+    animation: fadeIn 1s ease-in;
 }
 
 .hero p {
     font-size: 1.5rem;
+    animation: fadeIn 2s ease-in;
 }
 
-.container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
+/* Sección de servicios */
 .service-box {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 40px);
-    box-sizing: border-box;
-    border-radius: 10px;
-    text-align: center;
+    transition: transform 0.3s;
 }
 
-.service-box img {
-    max-width: 100px;
-    margin-bottom: 15px;
+.service-box:hover {
+    transform: scale(1.05);
 }
 
-.service-box h3 {
-    font-size: 1.5rem;
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Pie de página */
@@ -104,10 +74,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-@media (max-width: 768px) {
-    .service-box {
-        flex: 1 1 100%;
-    }
 }
